@@ -7,7 +7,7 @@ import Header from "~/components/header.astro";
 import "~/styles/index.css";
 import Bookmark from "../../assets/euler-identity-transgender.webp";
 
-const { generator, site } = Astro;
+const { generator } = Astro;
 const image = "../../assets/avatar-math-book-glitch.png";
 const description = "Suzza Silver is the author with a mathematical muse.";
 ---
@@ -42,7 +42,7 @@ const description = "Suzza Silver is the author with a mathematical muse.";
         document.documentElement.dataset.theme = themeSaved;
       } else {
         const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)",
+          "(prefers-color-scheme: dark)"
         ).matches;
         document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
       }
@@ -123,9 +123,9 @@ const description = "Suzza Silver is the author with a mathematical muse.";
           The mathematician Eugenia Cheng wrote an article titled, <a
             href="https://www.theguardian.com/books/2023/may/29/what-if-nobody-is-bad-at-maths"
             >“What if Nobody is Bad at Maths?”</a
-          > She explains that kids as young as five years old feel excitement
-          about mathematics. Math anxiety is something we learn as we grow up. I
-          agree with her statement at the end of the article.
+          > She explains that kids as young as five years old feel excitement about
+          mathematics. Math anxiety is something we learn as we grow up. I agree
+          with her statement at the end of the article.
         </p>
 
         <blockquote>
