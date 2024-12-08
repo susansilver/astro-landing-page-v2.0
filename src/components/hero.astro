@@ -1,0 +1,87 @@
+---
+import { Image } from "astro:assets";
+import friends from "../assets/flat-friendship-day-background-with-friends-amber.jpg";
+---
+
+<div class="relative overflow-hidden dark:bg-gray-900">
+  <main
+    class="mx-auto max-w-7xl px-4 pt-10 sm:px-6 sm:pt-12 md:pt-16 lg:px-8 lg:pt-20 xl:pt-28"
+  >
+    <div class="text-center sm:text-left lg:flex lg:flex-row lg:gap-8">
+      <div>
+        <Image
+          src={friends}
+          alt="Group of three friends with a cloud background"
+        />
+      </div>
+      <div>
+        <h1
+          class="text-left font-extrabold tracking-tight text-gray-900 text-6xl dark:text-gray-100"
+        >
+          Connecting Math Communicators
+        </h1>
+        <h2
+          class="mt-3 text-gray-600 text-xl sm:mx-auto sm:mt-5 sm:max-w-xl md:mt-5 lg:mx-0 dark:text-gray-300"
+        >
+          A potential new US conference inspired by Talking Maths in Public
+          (TMiP)
+        </h2>
+        <ul
+          class="mt-3 list-disc text-gray-600 sm:mx-auto sm:mt-5 sm:max-w-xl md:mt-5 lg:mx-0 dark:text-gray-300"
+        >
+          <li class="my-3">
+            We are creating a new conference to bring together math
+            communicators who work with the public.
+          </li>
+          <li class="my-3">
+            A place where people can share best practices, their experiences in
+            the field, and find support for their projects.
+          </li>
+          <li class="my-3">
+            This newsletter is for people who want to stay informed or are
+            interested in working together to make this happen.
+          </li>
+        </ul>
+
+        <form
+          action="https://buttondown.email/api/emails/embed-subscribe/math-communications"
+          method="post"
+          target="popupwindow"
+          onsubmit="window.open('https://buttondown.email/math-communications', 'popupwindow')"
+          class="embeddable-buttondown-form my-3 flex flex-row gap-5 dark:text-gray-300"
+        >
+          <div class="flex flex-col gap-3 lg:flex-row">
+            <label for="bd-email">Enter your email</label>
+            <input type="email" name="email" id="bd-email" class="text-black" />
+
+            <input
+              type="submit"
+              value="Get Updates"
+              class="rounded-xl bg-amber-400 p-3 hover:scale-125 dark:text-black"
+            />
+          </div>
+        </form>
+        <p>
+          <a
+            href="https://buttondown.email/refer/math-communications"
+            target="_blank"
+            class="underline dark:text-gray-300"
+            target="_blank">Powered by Buttondown.</a
+          >
+        </p>
+      </div>
+    </div>
+    <a
+      href="https://www.freepik.com/free-vector/flat-friendship-day-background-with-friends_27831835.htm"
+      class="underline dark:text-gray-300">Image by pikisuperstar on Freepik</a
+    >
+  </main>
+</div>
+
+<style>
+  input[type="email"] {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000; /* You can adjust the color and thickness of the outline */
+  }
+</style>

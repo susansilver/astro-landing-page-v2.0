@@ -1,0 +1,204 @@
+---
+import { Image } from "astro:assets";
+import Avatar from "../../assets/avatar-math-book-glitch.png";
+import "@fontsource-variable/inter";
+import Footer from "~/components/footer.astro";
+import Header from "~/components/header.astro";
+import "~/styles/index.css";
+import Bookmark from "../../assets/euler-identity-transgender.webp";
+
+const { generator, site } = Astro;
+const image = "../../assets/avatar-math-book-glitch.png";
+const description = "Suzza Silver is the author with a mathematical muse.";
+---
+
+<!doctype html>
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="generator" content={generator} />
+
+    <title>Suzza Silver | Math Comnmunications</title>
+    <meta name="description" content={description} />
+
+    <!-- social media -->
+    <meta property="og:title" content="Suzza Silver" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta
+      property="og:url"
+      content="https://mathcommunications.com/team/susan-silver"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- initialize theme -->
+    <script is:inline>
+      const themeSaved = localStorage.getItem("theme");
+
+      if (themeSaved) {
+        document.documentElement.dataset.theme = themeSaved;
+      } else {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+      }
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          if (!localStorage.getItem("theme")) {
+            document.documentElement.dataset.theme = event.matches
+              ? "dark"
+              : "light";
+          }
+        });
+    </script>
+  </head>
+  <body
+    class="h-full overflow-x-hidden bg-amber-200 text-black text-default text-gray-600 text-base selection:bg-secondary selection:text-white dark:bg-gray-900 dark:text-white"
+  >
+    <Header />
+    <main
+      class="prose prose-xl col-span-10 col-start-2 col-end-12 mx-auto dark:prose-invert md:col-span-6 md:col-start-4 md:col-end-10"
+    >
+      <div class="flex flex-col items-center justify-start gap-3 lg:flex-row">
+        <Image
+          src={Avatar}
+          alt="Susan Silver reading a book with a pink and orange gradient background."
+          class="rounded-xl"
+          width="150"
+          height="150"
+        />
+        <div class="flex flex-col">
+          <span class="font-bold text-2xl">Suzza Silver</span>
+          <span class="text-xl">Author</span>
+          <span class="italic">(They/Them)</span>
+        </div>
+      </div>
+      <div>
+        <h3>Table of Contents</h3>
+        <ul>
+          <li>
+            <a href="#movingfrommathanxietytomathconfidence"
+              >Moving From Math Anxiety to Math Confidence</a
+            >
+          </li>
+
+          <li>
+            <a href="#usmathcommunicationsconference"
+              >US Math Communications Conference</a
+            >
+          </li>
+        </ul>
+
+        <p>
+          My life would have taken a different path if I had only met a
+          mathematician any time before college.
+        </p>
+
+        <h2 id="movingfrommathanxietytomathconfidence">
+          Moving From Math Anxiety to Math Confidence
+        </h2>
+
+        <p>
+          My childhood was difficult and mathematics was one of my only
+          comforts. In fifth grade, I learned a trick that helped me understand
+          multiplication. The lesson from my struggle was that I needed time to
+          figure out the math. I started to love the subject because of this
+          achievement.
+        </p>
+
+        <p>
+          People find it hard to believe that I ever had math anxiety. They
+          don’t realize that we inherit negative attitudes toward math from our
+          parents. My family was math phobic. I had more in common with them
+          when I flunked my fourth grade math class.
+        </p>
+
+        <p>
+          The mathematician Eugenia Cheng wrote an article titled, <a
+            href="https://www.theguardian.com/books/2023/may/29/what-if-nobody-is-bad-at-maths"
+            >“What if Nobody is Bad at Maths?”</a
+          > She explains that kids as young as five years old feel excitement
+          about mathematics. Math anxiety is something we learn as we grow up. I
+          agree with her statement at the end of the article.
+        </p>
+
+        <blockquote>
+          One thing is clear: if you think of yourself as belonging to the “bad
+          at … ” camp, it’s not because you failed maths. It’s because maths
+          failed you.
+        </blockquote>
+
+        <p>
+          This is why math communications matter and particularly activities
+          with children. If we can get young people enthusiastic about math then
+          we can circumvent the onset of math phobia. I am a passionate
+          supporter of math communicators for this reason.
+        </p>
+
+        <p>
+          I hope my writing about mathematics helps adults change their
+          relationship with mathematics. Healing the wounds of the math trauma
+          they may have experienced.
+        </p>
+
+        <h2 id="usmathcommunicationsconference">
+          US Math Communications Conference
+        </h2>
+
+        <p>
+          I would like to start a math communications conference in the US. For
+          people who cannot travel to the UK for Talking Maths in Public. This
+          is why I am qualified to tackle this ambition.
+        </p>
+
+        <ul>
+          <li>I have written for Beauty of Mathematics since 2018.</li>
+          <li>
+            I recently created a database of more than 100 links on math
+            communication.
+          </li>
+          <li>
+            I have 10+ years of experience as a Community Manager/Moderator.
+          </li>
+          <ul>
+            <li>
+              Several years as the Director of Community for the tabletop
+              roleplaying game publisher now known as Solarian.
+            </li>
+            <li>
+              Five years at The Social Element agency where Keurig Dr Pepper and
+              Diageo were my clients.
+            </li>
+          </ul>
+        </ul>
+
+        <p>
+          My name is Suzza and I am non-binary. My pronouns are They/Them. I
+          live on the Oregon Coast with my cat Misty. My hobbies are writing,
+          web development, and cross stitching. I have <a
+            href="https://beautyofmathematics.com/downloads/"
+            >30 math themed cross stitch patterns for download</a
+          >. Including those that represent the LGBTQIA2S+ community.
+        </p>
+
+        <p>
+          I love talking to people about mathematics. If any of this interests
+          you, reach out at <a href="mailto:mathcomm@susansilver.net"
+            >mathcomm@susansilver.net</a
+          >.
+        </p>
+        <Image
+          src={Bookmark}
+          alt="A cross stitch of the Euler Identity in colors of the transgender pride flag."
+        />
+      </div>
+      <Footer />
+    </main>
+  </body>
+</html>

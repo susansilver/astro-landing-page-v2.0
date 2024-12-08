@@ -1,0 +1,19 @@
+---
+import { Icon } from "astro-icon/components";
+import ThemeSwitcher from "~/components/theme-switcher.astro";
+import type { NavItem } from "~/types";
+import Navbar from "~/components/navbar.astro";
+
+const navItems: Array<NavItem> = [
+  { title: "Features", url: "#features" },
+  { title: "Compatibility", url: "#compatibility" },
+  { title: "Showcase", url: "#showcase" },
+];
+---
+
+<header
+  id="page-header"
+  class="flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-black text-gray-600 dark:bg-gray-900 dark:text-gray-300"
+>
+  <Navbar />
+</header>
